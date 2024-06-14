@@ -104,7 +104,7 @@ function FavProductCart({ item, index }) {
         <div key={index + item._id} className='cards  w-[276.5px] px-[0.8px]  m-2  text-sm'>
           <div className='w-auto relative'>
             <img className='w-[274.9px] h-[fit]  ' src={item.products.displayImage} />
-            <button onClick={handleClick} className=' border-2 border-gray-700 bg-gray-300 rounded-full p-1 absolute  top-[10px] left-[240px] text-sm text-gray-700'>
+            <button onClick={handleClick} className=' border-2 border-gray-700 bg-gray-300 rounded-full p-1 absolute  top-[10px] left-[80%] text-sm text-gray-700'>
               <IoMdClose />
             </button>
           </div>
@@ -118,15 +118,15 @@ function FavProductCart({ item, index }) {
           </div>
           <button
 
-            className='text-white bg-blue-900 font-bold w-full text-center flex justify-center py-2 border-2 border-gray-300 text-[12px]'>
-            <span className='mr-2 pt-1'>
+            className='text-white bg-blue-900 font-bold w-full text-center flex justify-center px-3  border-2 border-gray-300 text-[12px]'>
+            <span className='mr-2 pt-3'>
               <BsBagPlusFill />
             </span>
 
             {resultStatus ? (
-              <span onClick={handleClick}><Link to='/cart'>Go to Bag</Link></span>
+              <span className="w-full  h-full py-2" onClick={handleClick}><Link to='/cart'>Go to Bag</Link></span>
             ) : (
-              <span onClick={() => handleAddtoCart(item.products._id)}>ADD TO BAG</span>
+              <span className="w-full  h-full py-2" onClick={() => handleAddtoCart(item.products._id)}>ADD TO BAG</span>
             )
 
             }
